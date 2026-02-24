@@ -1,0 +1,212 @@
+/* =============================================
+   TEAM / LEADERSHIP — HS Timber Group
+   ============================================= */
+
+.team {
+    background-color: var(--bg-light);
+    padding: var(--section-py) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Static oversized watermark text */
+.team-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: var(--font-heading);
+    font-size: 18vw;
+    color: rgba(0, 0, 0, 0.04);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.team-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.team-header {
+    margin-bottom: 56px;
+}
+
+.team-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: var(--text-dark);
+    line-height: 1.0;
+    margin-bottom: 16px;
+}
+
+.team-subtext {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-subtle);
+    max-width: 480px;
+}
+
+/* Team grid — staggered layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+}
+
+/* Stagger alternate cards down */
+.team-card:nth-child(even) {
+    margin-top: 48px;
+}
+
+/* Card */
+.team-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.team-card-image-wrap {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.team-card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(100%);
+    transition: filter var(--transition);
+    display: block;
+}
+
+/* Overlay */
+.team-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.team-card:hover .team-card-image-wrap img {
+    filter: grayscale(0%);
+}
+
+.team-card:hover .team-card-overlay {
+    opacity: 1;
+}
+
+/* Mobile: tap to toggle */
+.team-card.overlay-active .team-card-image-wrap img {
+    filter: grayscale(0%);
+}
+
+.team-card.overlay-active .team-card-overlay {
+    opacity: 1;
+}
+
+.team-card-name {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+.team-card-title {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.team-card-linkedin {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.team-card-linkedin svg {
+    flex-shrink: 0;
+}
+
+/* Mobile name/title fallback (below image) */
+.team-card-info {
+    display: none;
+    padding: 14px 0 0;
+}
+
+.team-card-info .team-card-name {
+    color: var(--text-dark);
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.team-card-info .team-card-title {
+    color: var(--text-subtle);
+    font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-card:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .team-card:nth-child(3n+2) {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .team-card:nth-child(even),
+    .team-card:nth-child(3n+2) {
+        margin-top: 0;
+    }
+
+    /* On mobile: overlay not triggered by hover, show name below */
+    .team-card-info {
+        display: block;
+    }
+
+    .team-card-overlay {
+        /* Still toggleable via tap, but info visible by default */
+    }
+
+    .team-header {
+        margin-bottom: 40px;
+    }
+
+    .team-watermark {
+        font-size: 30vw;
+    }
+}

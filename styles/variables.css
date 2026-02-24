@@ -1,0 +1,52 @@
+/* =============================================
+   DESIGN TOKENS — HS Timber Group Landing Page
+   ============================================= */
+
+:root {
+    /* Backgrounds */
+    --bg-dark: #111111;
+    --bg-light: #F4F4F4;
+    --bg-white: #FFFFFF;
+
+    /* Accent */
+    --accent: #F38B00;
+    --accent-hover: #D47A00;
+
+    /* Text */
+    --text-light: #FFFFFF;
+    --text-dark: #111111;
+    --text-muted: #888888;
+    --text-subtle: #666666;
+
+    /* Borders */
+    --border-dark: #333333;
+    --border-light: #CCCCCC;
+    --border-width: 2px;
+
+    /* Overlays */
+    --overlay-dark: rgba(0, 0, 0, 0.55);
+    --overlay-accent: rgba(243, 139, 0, 0.88);
+
+    /* Fonts */
+    --font-heading: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+    /* Spacing */
+    --section-py: 80px;
+    --gap: 24px;
+
+    /* Transitions */
+    --transition: 0.2s ease;
+
+    /* Container */
+    --container-max: 1400px;
+    --container-px: 48px;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-py: 48px;
+        --container-px: 20px;
+        --gap: 16px;
+    }
+}

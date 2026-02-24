@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HS Timber Group - Perfection in Timber</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Foundation CSS -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/global.css">
+
+  <!-- Section CSS -->
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/expertise.css">
+  <link rel="stylesheet" href="styles/products.css">
+  <link rel="stylesheet" href="styles/team.css">
+  <link rel="stylesheet" href="styles/locations.css">
+  <link rel="stylesheet" href="styles/faq.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <!-- JS Modules -->
+  <script src="js/nav.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/accordion.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+
+  <!-- ==============================================
+       1. NAVIGATION BAR
+       ============================================== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <!-- Left Logo -->
+      <a href="#" class="nav-logo">
+        <svg class="nav-logo-svg" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+          <rect x="4" y="4" width="12" height="32" />
+          <rect x="24" y="4" width="12" height="32" />
+          <line x1="16" y1="20" x2="24" y2="20" />
+        </svg>
+        <span class="nav-logo-text">HS TIMBER GROUP</span>
+      </a>
+
+      <!-- Center Links -->
+      <div class="nav-links">
+        <a href="#about">Company</a>
+        <a href="#faq">Responsibility</a>
+        <a href="#products">Purchase</a>
+        <a href="#careers">Career</a>
+        <a href="#expertise">News</a>
+      </div>
+
+      <!-- Right CTA -->
+      <a href="#contact" class="nav-cta">Contact Us</a>
+
+      <!-- Mobile Hamburger -->
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-overlay">
+    <button class="nav-overlay-close" aria-label="Close menu">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <a href="#about">Company</a>
+    <a href="#faq">Responsibility</a>
+    <a href="#products">Purchase</a>
+    <a href="#careers">Career</a>
+    <a href="#expertise">News</a>
+    <a href="#contact" class="text-accent">Contact Us</a>
+  </div>
+
+
+  <main>
+    <!-- ==============================================
+         2. HERO SECTION
+         ============================================== -->
+    <section class="hero" id="hero">
+      <!-- Fallback image source path (change later when generated) -->
+      <img src="https://images.unsplash.com/photo-1590483863456-11f8cd5302fa?q=80&w=2600&auto=format&fit=crop" alt="Timber hands" class="hero-bg" loading="eager">
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-content">
+        <div class="hero-heading-group">
+          <h1 class="hero-heading">Perfection<br>in Timber.</h1>
+        </div>
+        
+        <div class="hero-bottom">
+          <!-- Scroll Indicator -->
+          <div class="hero-scroll">
+            <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+            <span class="hero-scroll-text">Scroll Down</span>
+          </div>
+          
+          <!-- CTA -->
+          <a href="#contact" class="hero-cta">
+            Contact Us
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         3. ABOUT & STATS SECTION
+         ============================================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="about-heading">We are HS Timber Group, a leading wood processing company serving customers in 80 countries.</h2>
+      </div>
+      
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">07</div>
+          <div class="stat-label">Global Production Sites</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">80</div>
+          <div class="stat-label">Markets Worldwide</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2,700</div>
+          <div class="stat-label">Employees</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         4. EXPERTISE SECTION (CAROUSEL)
+         ============================================== -->
+    <section class="expertise" id="expertise" data-carousel="expertise">
+      <div class="expertise-inner">
+        
+        <!-- Left Image Pane -->
+        <div class="expertise-image-pane">
+          <img src="https://images.unsplash.com/photo-1549419137-b935dfd0c75c?q=80&w=1400&auto=format&fit=crop" alt="Forestry" class="active">
+          <img src="https://images.unsplash.com/photo-1590483863456-11f8cd5302fa?q=80&w=1400&auto=format&fit=crop" alt="Sawmill">
+          <img src="https://images.unsplash.com/photo-1533054174351-4091a13e2bb9?q=80&w=1400&auto=format&fit=crop" alt="Lumber">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop" alt="Shipping">
+        </div>
+
+        <!-- Right Content Pane -->
+        <div class="expertise-content-pane">
+          <span class="expertise-label">What We Do</span>
+          <h2 class="expertise-heading">End-to-End Expertise</h2>
+          
+          <div class="expertise-features">
+            <!-- Slide 1 -->
+            <div class="expertise-slide active">
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">1</span>
+                <span class="expertise-feature-text">Full control of the supply chain from forest to final product.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">2</span>
+                <span class="expertise-feature-text">Certified sustainable forestry partnerships across Europe.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">3</span>
+                <span class="expertise-feature-text">Complete traceability of every cubic meter of timber.</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="expertise-slide">
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">1</span>
+                <span class="expertise-feature-text">State-of-the-art automated sawmill technology.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">2</span>
+                <span class="expertise-feature-text">Precision cutting with millimeter accuracy.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">3</span>
+                <span class="expertise-feature-text">AI-assisted quality grading and defect detection.</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="expertise-slide">
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">1</span>
+                <span class="expertise-feature-text">Industrial kiln-drying for optimal moisture content.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">2</span>
+                <span class="expertise-feature-text">Precision planing and profiling to exact specifications.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">3</span>
+                <span class="expertise-feature-text">Custom product development for specialized applications.</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="expertise-slide">
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">1</span>
+                <span class="expertise-feature-text">Established logistics network spanning 80 countries.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">2</span>
+                <span class="expertise-feature-text">Just-in-time delivery for construction project timelines.</span>
+              </div>
+              <div class="expertise-feature">
+                <span class="expertise-feature-num">3</span>
+                <span class="expertise-feature-text">Optimized packaging for intercontinental shipping.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Controls -->
+          <div class="expertise-controls">
+            <div class="expertise-counter">1 / 4</div>
+            <div class="expertise-arrows">
+              <button class="arrow-btn" data-dir="prev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="15 18 9 12 15 6"/>
+                </svg>
+              </button>
+              <button class="arrow-btn" data-dir="next" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         5. PRODUCT CATALOG SECTION
+         ============================================== -->
+    <section class="products" id="products" data-carousel="products">
+      <div class="container">
+        
+        <div class="products-header">
+          <h2 class="products-heading">Product Catalog</h2>
+          <div class="products-arrows">
+            <button class="arrow-btn-circle" data-dir="prev" aria-label="Previous product">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+            <button class="arrow-btn-circle" data-dir="next" aria-label="Next product">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="products-carousel-viewport">
+          <div class="products-track">
+            <!-- 10 Product Cards -->
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1546418835-26302f37c44d?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Structural</div>
+                <div class="product-card-name">Sawn Timber</div>
+                <div class="product-card-dims">50×100mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Structural</div>
+                <div class="product-card-name">Construction Laths</div>
+                <div class="product-card-dims">30×50mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Structural</div>
+                <div class="product-card-name">Structural Beams</div>
+                <div class="product-card-dims">100×200mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1546418835-26302f37c44d?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Finished</div>
+                <div class="product-card-name">Planed Boards</div>
+                <div class="product-card-dims">25×150mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Finished</div>
+                <div class="product-card-name">Decking Planks</div>
+                <div class="product-card-dims">28×145mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Finished</div>
+                <div class="product-card-name">Cladding Profiles</div>
+                <div class="product-card-dims">19×125mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1546418835-26302f37c44d?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Structural</div>
+                <div class="product-card-name">Roof Battens</div>
+                <div class="product-card-dims">38×50mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Industrial</div>
+                <div class="product-card-name">Pallet Boards</div>
+                <div class="product-card-dims">22×100mm</div>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Engineered</div>
+                <div class="product-card-name">Finger-Jointed Timber</div>
+                <div class="product-card-dims">45×95mm</div>
+              </div>
+            </div>
+            <!-- 10 -->
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1546418835-26302f37c44d?q=80&w=800&auto=format&fit=crop" class="product-card-image" alt="Wood">
+              <div class="product-card-body">
+                <div class="product-card-category">Engineered</div>
+                <div class="product-card-name">Glulam Beams</div>
+                <div class="product-card-dims">120×240mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-progress">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         6. TEAM / LEADERSHIP SECTION
+         ============================================== -->
+    <section class="team" id="team">
+      <div class="team-watermark">HS TIMBER GROUP</div>
+      
+      <div class="container team-inner">
+        <div class="team-header">
+          <h2 class="team-heading">Our Leadership</h2>
+          <p class="team-subtext">The people driving operational excellence, sustainable practices, and global growth at HS Timber Group.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- 1 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="CEO">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Thomas Mayr</div>
+                <div class="team-card-title">Chief Executive Officer</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Thomas Mayr</div>
+              <div class="team-card-title">Chief Executive Officer</div>
+            </div>
+          </div>
+          
+          <!-- 2 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="COO">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Brigitte Ecker</div>
+                <div class="team-card-title">Chief Operating Officer</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Brigitte Ecker</div>
+              <div class="team-card-title">Chief Operating Officer</div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="CFO">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Klaus Hoffmann</div>
+                <div class="team-card-title">Chief Financial Officer</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Klaus Hoffmann</div>
+              <div class="team-card-title">Chief Financial Officer</div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="VP Production">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Stefan Novak</div>
+                <div class="team-card-title">VP Production</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Stefan Novak</div>
+              <div class="team-card-title">VP Production</div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="VP Sales">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Anna Schreiber</div>
+                <div class="team-card-title">VP Sales & Marketing</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Anna Schreiber</div>
+              <div class="team-card-title">VP Sales & Marketing</div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="team-card" onclick="this.classList.toggle('overlay-active')">
+            <div class="team-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="VP Sustainability">
+              <div class="team-card-overlay">
+                <div class="team-card-name">Lukas Berger</div>
+                <div class="team-card-title">VP Sustainability</div>
+                <div class="team-card-linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </div>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-card-name">Lukas Berger</div>
+              <div class="team-card-title">VP Sustainability</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         7. GLOBAL LOCATIONS SECTION
+         ============================================== -->
+    <section class="locations" id="locations">
+      <div class="container">
+        <div class="locations-header">
+          <h2 class="locations-heading">Production Sites</h2>
+        </div>
+
+        <div class="locations-grid">
+          <!-- Card 1 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Romania (Rectangle) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><rect x="14" y="6" width="20" height="36" /></svg>
+            </div>
+            <div class="location-country">Romania</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Integrated Sawmill Complex
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Capacity: 500,000 m³/year
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 2003
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Germany (Wide Rect) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><rect x="6" y="16" width="36" height="16" /></svg>
+            </div>
+            <div class="location-country">Germany</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Distribution & Sales Hub
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Market: Western Europe
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 2010
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Finland (Triangle) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><polygon points="24,6 40,40 8,40" /></svg>
+            </div>
+            <div class="location-country">Finland</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Forestry Operations Center
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Managed Area: 12,000 ha
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 2015
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Austria (Diamond) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><polygon points="24,6 42,24 24,42 6,24" /></svg>
+            </div>
+            <div class="location-country">Austria</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Corporate Headquarters
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Strategy & Innovation Lab
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 1956
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Czech Republic (Hexagon) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><polygon points="24,6 40,14 40,34 24,42 8,34 8,14" /></svg>
+            </div>
+            <div class="location-country">Czech Republic</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Panel & Board Production
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Capacity: 200,000 m³/year
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 2008
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="location-card">
+            <div class="location-icon">
+              <!-- Ukraine (Parallelogram) -->
+              <svg viewBox="0 0 48 48" fill="currentColor"><polygon points="12,12 42,12 36,36 6,36" /></svg>
+            </div>
+            <div class="location-country">Ukraine</div>
+            <div class="location-details">
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Raw Material Procurement
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Quality Inspection & Logistics
+              </div>
+              <div class="location-detail">
+                <div class="location-bullet"></div>
+                Established: 2005
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         8. SUPPLY CHAIN Q&A SECTION
+         ============================================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq-header">
+          <h2 class="faq-heading">Supply Chain Q&A</h2>
+        </div>
+        
+        <div class="faq-list">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-question-text">Where does HS Timber Group source its raw materials?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We source our timber from sustainably managed forests across Central and Eastern Europe. Every log is fully traceable — from the forest of origin to our production facilities. We maintain long-term partnerships with certified forest managers in Romania, Finland, and Ukraine, ensuring responsible forestry practices.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-question-text">How do you ensure sustainable forestry practices?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Sustainability is built into every stage of our operations. We hold FSC and PEFC chain-of-custody certifications, conduct regular third-party audits, and invest in forest regeneration programs. Our annual sustainability report details our carbon footprint reduction targets and reforestation efforts.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-question-text">What certifications do your products carry?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Our products carry FSC and PEFC chain-of-custody certifications, CE marking for structural timber, and meet EN 14081 grading standards. Specific products also carry fire resistance ratings and additional national certifications depending on the destination market.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-question-text">What is your average delivery timeline?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Standard products are available within 5–10 business days for European markets. Intercontinental shipments typically require 4–6 weeks. We offer just-in-time delivery schedules for large construction projects with pre-negotiated volumes.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-question-text">Do you offer custom dimensions and specifications?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Our manufacturing facilities are equipped for custom cutting, planing, and profiling. Minimum order quantities apply for custom specifications. Contact our sales team for a detailed quote — we typically turn around custom orders within 15–20 business days.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         9a. CAREERS CTA SECTION
+         ============================================== -->
+    <section class="careers" id="careers">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?q=80&w=2600&auto=format&fit=crop" alt="Warehouse" class="careers-bg">
+      <div class="careers-overlay"></div>
+      <div class="container careers-content">
+        <h2 class="careers-heading">Looking for a career?</h2>
+        <button class="btn-orange">
+          Explore Careers
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       9b & 9c. FOOTER CONTACT & BOTTOM
+       ============================================== -->
+  <footer id="contact">
+    <div class="footer-contact">
+      <div class="container footer-contact-grid">
+        
+        <div class="footer-info">
+          <div class="footer-company">HS Timber Group GmbH</div>
+          <div class="footer-address">
+            Favoritenstraße 7/2<br>
+            1040 Vienna, Austria<br><br>
+            Phone: +43 1 585 68 62-0<br>
+            Email: office@hs-timber.com
+          </div>
+          
+          <div class="footer-links">
+            <a href="#" class="footer-link">Imprint</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </div>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn" class="footer-social">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer-social">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="footer-social">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-form-wrapper">
+          <form class="footer-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-orange form-submit">Submit</button>
+            <div class="form-success">Thank you for your message. We will get back to you soon.</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-giant">Holzindustrie Schweighofer</div>
+        <div class="footer-copy">© 2026 HS Timber Group GmbH. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

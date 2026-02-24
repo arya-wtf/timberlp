@@ -1,0 +1,163 @@
+/* =============================================
+   EXPERTISE CAROUSEL — HS Timber Group Landing Page
+   ============================================= */
+
+.expertise {
+    background-color: var(--bg-dark);
+    border-top: var(--border-width) solid var(--border-dark);
+}
+
+.expertise-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+/* Image pane */
+.expertise-image-pane {
+    position: relative;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.expertise-image-pane img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+    position: absolute;
+    inset: 0;
+}
+
+.expertise-image-pane img.active {
+    display: block;
+}
+
+/* Content pane */
+.expertise-content-pane {
+    background-color: var(--bg-light);
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.expertise-slide {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+}
+
+.expertise-slide.active {
+    display: flex;
+}
+
+.expertise-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.expertise-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    text-transform: uppercase;
+    color: var(--text-dark);
+    line-height: 1.0;
+    margin-bottom: 36px;
+}
+
+.expertise-features {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.expertise-feature {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-light);
+}
+
+.expertise-feature:last-child {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.expertise-feature-num {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    padding-top: 2px;
+}
+
+.expertise-feature-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Bottom controls */
+.expertise-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 36px;
+}
+
+.expertise-counter {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    color: var(--border-light);
+    line-height: 1.0;
+    user-select: none;
+}
+
+.expertise-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.expertise-arrows .arrow-btn {
+    color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .expertise-content-pane {
+        padding: 48px 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .expertise-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .expertise-image-pane {
+        height: 280px;
+        position: relative;
+    }
+
+    .expertise-image-pane img {
+        position: absolute;
+    }
+
+    .expertise-content-pane {
+        padding: 40px 24px;
+    }
+
+    .expertise-controls {
+        margin-top: 28px;
+    }
+}

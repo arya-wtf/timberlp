@@ -1,0 +1,176 @@
+/* =============================================
+   NAVIGATION — HS Timber Group Landing Page
+   ============================================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-white);
+    border-bottom: var(--border-width) solid var(--border-light);
+    height: 64px;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-px);
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.nav-logo-svg {
+    width: 36px;
+    height: 36px;
+}
+
+.nav-logo-text {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--text-dark);
+    letter-spacing: 1px;
+}
+
+/* Center links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    transition: color var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Right CTA */
+.nav-cta {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    transition: color var(--transition);
+    flex-shrink: 0;
+}
+
+.nav-cta:hover {
+    color: var(--accent);
+}
+
+/* Hamburger — hidden on desktop */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-dark);
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Mobile overlay */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: var(--bg-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-overlay a {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 8vw, 3rem);
+    text-transform: uppercase;
+    color: var(--text-light);
+    transition: color var(--transition);
+}
+
+.nav-overlay a:hover {
+    color: var(--accent);
+}
+
+.nav-overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    padding: 8px;
+}
+
+body.nav-open .nav-overlay {
+    display: flex;
+}
+
+body.nav-open .nav-hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+body.nav-open .nav-hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+body.nav-open .nav-hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .nav-links {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-logo-text {
+        font-size: 16px;
+    }
+}

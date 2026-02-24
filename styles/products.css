@@ -1,0 +1,134 @@
+/* =============================================
+   PRODUCT CATALOG — HS Timber Group Landing Page
+   ============================================= */
+
+.products {
+    background-color: var(--bg-dark);
+    padding: var(--section-py) 0;
+    border-top: var(--border-width) solid var(--border-dark);
+}
+
+.products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    gap: 24px;
+}
+
+.products-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: var(--text-light);
+    line-height: 1.0;
+}
+
+.products-arrows {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.products-arrows .arrow-btn-circle {
+    color: var(--text-light);
+}
+
+/* Carousel viewport */
+.products-carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.products-track {
+    display: flex;
+    gap: var(--gap);
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+/* Product card */
+.product-card {
+    flex: 0 0 calc((100% - (var(--gap) * 2)) / 3);
+    border: 1px solid var(--border-dark);
+    background-color: var(--bg-dark);
+    transition: border-color var(--transition);
+    cursor: default;
+}
+
+.product-card:hover {
+    border-color: var(--accent);
+}
+
+.product-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #1e1e1e;
+}
+
+.product-card-body {
+    padding: 20px 20px 24px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.product-card-category {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.product-card-name {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.product-card-dims {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Progress indicator */
+.products-progress {
+    display: flex;
+    gap: 4px;
+    margin-top: 32px;
+}
+
+.products-progress-dot {
+    height: 2px;
+    background-color: var(--border-dark);
+    flex: 1;
+    transition: background-color var(--transition);
+}
+
+.products-progress-dot.active {
+    background-color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .product-card {
+        flex: 0 0 calc((100% - var(--gap)) / 2);
+    }
+}
+
+@media (max-width: 767px) {
+    .product-card {
+        flex: 0 0 100%;
+    }
+
+    .products-header {
+        margin-bottom: 32px;
+    }
+}

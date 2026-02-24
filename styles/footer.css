@@ -1,0 +1,235 @@
+/* =============================================
+   CTA & FOOTER — HS Timber Group
+   ============================================= */
+
+/* 9a. Careers CTA Banner */
+.careers {
+    position: relative;
+    background-color: var(--bg-dark);
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.careers-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.careers-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75));
+}
+
+.careers-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 var(--container-px);
+}
+
+.careers-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--text-light);
+    line-height: 1.0;
+    margin-bottom: 32px;
+}
+
+/* 9b. Footer Top — Contact Grid */
+.footer-contact {
+    background-color: var(--bg-dark);
+    padding: 80px 0;
+    border-top: var(--border-width) solid var(--border-dark);
+}
+
+.footer-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+/* Left: Info */
+.footer-info {
+    max-width: 400px;
+}
+
+.footer-company {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+.footer-address {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.footer-link {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.footer-link:hover {
+    color: var(--accent);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social {
+    color: var(--text-light);
+    transition: color var(--transition);
+}
+
+.footer-social:hover {
+    color: var(--accent);
+}
+
+/* Right: Form */
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-dark);
+    border-radius: 0;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 12px 0;
+    transition: border-color var(--transition);
+}
+
+.form-input::placeholder {
+    color: #666666;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-input.error {
+    border-color: #ef4444;
+}
+
+textarea.form-input {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-submit {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.form-success {
+    display: none;
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.form-success.show {
+    display: block;
+}
+
+/* 9c. Footer Bottom */
+.footer-bottom {
+    background-color: var(--bg-dark);
+    padding: 40px 0;
+    border-top: 1px solid var(--border-dark);
+}
+
+.footer-giant {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 12vw, 11rem);
+    color: rgba(255, 255, 255, 0.05);
+    /* very subtle gray */
+    white-space: nowrap;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    text-align: center;
+    margin-bottom: 24px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.footer-copy {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .careers {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .footer-contact {
+        padding: 60px 0;
+    }
+
+    .footer-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-giant {
+        font-size: 18vw;
+    }
+}

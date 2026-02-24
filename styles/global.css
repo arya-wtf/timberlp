@@ -1,0 +1,142 @@
+/* =============================================
+   GLOBAL STYLES — HS Timber Group Landing Page
+   ============================================= */
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border-radius: 0;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-px);
+}
+
+/* Section spacing */
+.section {
+    padding: var(--section-py) 0;
+}
+
+/* Section labels */
+.section-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* Section headings */
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    line-height: 1.0;
+}
+
+/* Accent color utility */
+.text-accent {
+    color: var(--accent);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-dark {
+    color: var(--text-dark);
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+/* Standard orange CTA button */
+.btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.btn-orange:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Square arrow button (for carousels) */
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: var(--border-width) solid currentColor;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+}
+
+.arrow-btn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-light);
+}
+
+/* Circular arrow button (product carousel only) */
+.arrow-btn-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: var(--border-width) solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+}
+
+.arrow-btn-circle:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-light);
+}
+
+/* Divider */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-dark);
+}
+
+.divider-light {
+    border: none;
+    border-top: 1px solid var(--border-light);
+}
+
+/* No-scroll utility for mobile menu open */
+body.nav-open {
+    overflow: hidden;
+}

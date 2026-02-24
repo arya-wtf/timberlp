@@ -1,0 +1,149 @@
+/* =============================================
+   HERO — HS Timber Group Landing Page
+   ============================================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background-color: #1a1008;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    fetchpriority: high;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.55) 100%);
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 var(--container-px);
+    padding-bottom: 60px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+/* Heading group */
+.hero-heading-group {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 48px;
+}
+
+.hero-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 12vw, 9rem);
+    text-transform: uppercase;
+    color: var(--text-light);
+    line-height: 0.95;
+    max-width: 10ch;
+}
+
+/* Bottom row */
+.hero-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Scroll indicator */
+.hero-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: var(--border-width) solid rgba(255, 255, 255, 0.8);
+    padding: 14px 20px;
+    color: var(--text-light);
+    min-width: 100px;
+}
+
+.hero-scroll-arrow {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.hero-scroll-text {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Contact CTA */
+.hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--accent);
+    color: var(--text-light);
+    padding: 20px 32px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background-color var(--transition);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.hero-cta:hover {
+    background-color: var(--accent-hover);
+}
+
+.hero-cta svg {
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .hero-content {
+        padding: 0 var(--container-px);
+        padding-bottom: 0;
+    }
+
+    .hero-heading-group {
+        padding-bottom: 32px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta {
+        justify-content: center;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,107 @@
+/* =============================================
+   SUPPLY CHAIN Q&A — HS Timber Group
+   ============================================= */
+
+.faq {
+    background-color: var(--bg-dark);
+    padding: var(--section-py) 0;
+    border-top: var(--border-width) solid var(--border-dark);
+}
+
+.faq-header {
+    margin-bottom: 48px;
+}
+
+.faq-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: var(--text-light);
+    line-height: 1.0;
+}
+
+/* Accordion list */
+.faq-list {
+    border-top: 1px solid var(--border-dark);
+}
+
+/* Item */
+.faq-item {
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* Question row */
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.faq-question-text {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    line-height: 1.4;
+    flex: 1;
+}
+
+.faq-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-question-text {
+    color: var(--accent);
+}
+
+/* Answer panel */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer-inner {
+    padding: 0 0 28px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 720px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .faq-question {
+        padding: 20px 0;
+    }
+
+    .faq-question-text {
+        font-size: 0.8rem;
+    }
+
+    .faq-answer-inner {
+        font-size: 14px;
+    }
+}
